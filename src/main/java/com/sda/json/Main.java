@@ -53,8 +53,8 @@ public class Main {
         studentList.add(new Student("Ola", "2", new Address("Bdg", "Druga")));
         studentList.add(new Student("kasia", "3", new Address("Gda", "Inna")));
         try {
-            String studentLst = mapper.writeValueAsString(personList);
-            System.out.println(studentList);
+            String studentLst = mapper.writeValueAsString(studentList);
+            System.out.println(studentLst);
             Files.write(Paths.get("studentList.json"), studentLst.getBytes());
 
 
