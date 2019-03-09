@@ -1,4 +1,4 @@
-package com.sda.json;
+package com.sda.readjson;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,13 +8,12 @@ import lombok.NoArgsConstructor;
  * @author perczynski
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Person {
+@AllArgsConstructor
+public class Address {
+    private String city;
+    private String street;
 
-    private String name;
-    private String lastname;
-    private int age;
 
 
 }
