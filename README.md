@@ -3,7 +3,3 @@
 Mapowanie objektu na JSON
 
 
-
-
-
-
