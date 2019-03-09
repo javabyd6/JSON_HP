@@ -3,11 +3,13 @@ package com.sda.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -32,6 +34,7 @@ public class Main {
             e.printStackTrace();
         }
 
+
         List<Person> personList = new ArrayList<>();
         personList.add(person);
         personList.add(person2);
@@ -42,6 +45,9 @@ public class Main {
             String personLst = mapper.writeValueAsString(personList);
             System.out.println(personLst);
             Files.write(Paths.get("personLst.json"), personLst.getBytes());
+
+            Person[] personArray = mapper.readValue(personLst,Person[].class);
+            System.out.println(personArray[0].toString());
 
 
         } catch (IOException e) {
@@ -60,6 +66,7 @@ public class Main {
 
         } catch (IOException e) {
             e.printStackTrace();
+
         }
 
 
