@@ -1,8 +1,5 @@
 package com.sda.json;
 
-
-
-
 /**
  * @author perczynski
  */
